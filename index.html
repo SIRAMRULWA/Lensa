@@ -650,51 +650,6 @@
     </div>
 
     
-<div id="chartContainer"></div>
-<form id="reviewForm">
-  <label for="chartRating">Rating:</label>
-  <select id="chartRating">
-    <option value="1">1 star</option>
-    <option value="2">2 stars</option>
-    <option value="3">3 stars</option>
-    <option value="4">4 stars</option>
-    <option value="5">5 stars</option>
-  </select>
-  <label for="chartComment">Comment:</label>
-  <textarea id="chartComment"></textarea>
-  <button type="submit">Submit</button>
-</form>
-<div id="reviewsContainer"></div>
-    
-<script>
-// Load jQuery library (make sure to include jQuery in your HTML)
-$(document).ready(function() {
-  // Handle form submission
-  $('#reviewForm').submit(function(event) {
-    event.preventDefault(); // Prevent form from submitting and page refresh
-
-    // Get values from form inputs
-    var rating = $('#chartRating').val();
-    var comment = $('#chartComment').val();
-
-    // Create a new review element
-    var reviewElement = $('<div class="review"></div>');
-    var ratingElement = $('<span class="rating">Rating: ' + rating + ' stars</span>');
-    var commentElement = $('<p class="comment">' + comment + '</p>');
-
-    // Append review elements to the reviews container
-    reviewElement.append(ratingElement);
-    reviewElement.append(commentElement);
-    $('#reviewsContainer').append(reviewElement);
-
-    // Clear form inputs
-    $('#chartRating').val('');
-    $('#chartComment').val('');
-  });
-});
-</script>  
-
-    
     <div class="container footer-bottom clearfix">
       <div class="copyright">
         &copy; Copyright <strong><span>De Lensa</span></strong>. All Rights Reserved
